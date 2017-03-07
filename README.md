@@ -4,6 +4,10 @@ Use firework rockets to boost your minecart!
 **Spigot** Version 1.11
 **Developers** WASasquatch, Drkmaster83
 
+### Commands
+
+ - **rpmdebug** Enabled/Disabled RPM Debug from console
+
 ### Example Configuration
 
 Currently the configuration file is very simple. Simple fine tune the settings as you see fit, or use the example config.
