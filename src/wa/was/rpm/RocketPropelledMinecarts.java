@@ -3,6 +3,8 @@ package wa.was.rpm;
 //Import Bukkit API & Utils
 import java.io.File;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import wa.was.rpm.commands.DebugCommand;
 import wa.was.rpm.events.MinecartEvent;
 
 public class RocketPropelledMinecarts extends JavaPlugin
@@ -11,6 +13,7 @@ public class RocketPropelledMinecarts extends JavaPlugin
     public void onEnable() {
     	createConfig();
     	getServer().getPluginManager().registerEvents(new MinecartEvent(this), this);
+    	this.getCommand("rpmdebug").setExecutor(new DebugCommand());
     }
     
     private void createConfig() {

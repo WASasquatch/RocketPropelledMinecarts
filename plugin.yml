@@ -2,6 +2,9 @@ name: RocketPropelledMinecarts
 main: wa.was.rpm.RocketPropelledMinecarts
 version: 0.0.1
 commands:
+  rpmdebug:
+    description: Enable Rocket Propelled Minecarts debug in console
+    usage: rpmdebug
 permissions:
   rpm.boost:
     description: Allows use of rockets in minecarts

@@ -1,5 +1,7 @@
 package wa.was.rpm.tasks;
 
+import wa.was.rpm.commands.DebugCommand;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.UUID;
@@ -33,14 +35,21 @@ public class SlowMinecarts extends BukkitRunnable
         		continue;
         	}
         	Vector cv = cart.getVelocity();
-        	System.out.print("Current minecart velocity: "+cv.toString() + ", length " + cv.length());
-        	System.out.print("BaseVector:" + cancelThreshold.toString());
+        	if ( DebugCommand.debugEnabled ) {
+        		System.out.print("----[RPM Debug]----");
+        		System.out.print("Minecart: "+ cart.getUniqueId());
+        		System.out.print("Velocity: "+ cv.toString() +" | Length: "+ cv.length());
+        		System.out.print("BaseVector: "+ cancelThreshold.toString());
+        	}
         	Vector nv = new Vector(
         					(Math.abs(cv.getX()) > cancelThreshold.getX() ? cv.getX() * .875 : cancelThreshold.getX()),
         					(Math.abs(cv.getY()) > cancelThreshold.getY() ? cv.getY() * .875 : cancelThreshold.getY()),
         					(Math.abs(cv.getZ()) > cancelThreshold.getZ() ? cv.getZ() * .875 : cancelThreshold.getZ())
         			);
-        	System.out.print("Setting minecart velocity to: "+nv);
+        	if ( DebugCommand.debugEnabled ) {
+        		System.out.print("Setting minecart velocity to: "+nv);
+        		System.out.print("-------------------");
+        	}
         	cart.setVelocity(nv);
     	}
 	}
@@ -48,7 +57,11 @@ public class SlowMinecarts extends BukkitRunnable
     public void removeMinecart(Minecart cart) {
     	minecarts.remove(cart);
     	baseVectors.remove(cart.getUniqueId());
-    	System.out.println("Forgetting about this minecart.");
+    	if ( DebugCommand.debugEnabled ) {
+	    	System.out.print("----[RPM Debug]----");
+	    	System.out.println("Clearing Minecart: "+ cart.getUniqueId());
+			System.out.print("-------------------");
+    	}
     }
     
     public boolean withinThreshold(Vector cartV) {
