@@ -1,4 +1,4 @@
-# Rocket Propelled Minecarts v0.0.1
+# Rocket Propelled Minecarts v0.0.2
 Use firework rockets to boost your minecart!
 
 **Spigot** Version 1.11
