@@ -1,0 +1,12 @@
+# Rocket Propelled Minecarts
+# By WASasquatch and Drkmaster83
+
+# Rocket Boost Multiplier [Default: 2]
+boost-factor: 2
+
+# Max Minecart Speed [Default: 0.6]
+# Original Minecraft Default: 0.4
+maximum-speed: 0.6
+
+# No Permission to Boost
+no-permissions: "You do not have permission to Rock Boost!"
