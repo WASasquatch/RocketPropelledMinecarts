@@ -9,4 +9,4 @@ boost-factor: 2
 maximum-speed: 0.6
 
 # No Permission to Boost
-no-permissions: "You do not have permission to Rock Boost!"
+no-permissions: "You do not have permission to Rocket Boost!"
