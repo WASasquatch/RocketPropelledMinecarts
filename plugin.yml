@@ -3,6 +3,6 @@ main: wa.was.rpm.RocketPropelledMinecarts
 version: 0.0.1
 commands:
 permissions:
-    rocketpropelledminecart.allow:
-        description: Allows use of rockets in minecarts
-        default: true
+  rpm.boost:
+    description: Allows use of rockets in minecarts
+    default: true
