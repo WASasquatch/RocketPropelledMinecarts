@@ -9,8 +9,8 @@ import org.bukkit.entity.Minecart;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.Vector;
 
-public class SlowMinecarts extends BukkitRunnable
-{
+public class SlowMinecarts extends BukkitRunnable {
+	
 	private ArrayList<Minecart> minecarts;
 	private HashMap<UUID, Vector> baseVectors;
 	
