@@ -67,7 +67,7 @@ public class MinecartEvent implements Listener
 		cart.setVelocity(cart.getVelocity().multiply(boostFactor));
 		
 		// Play rocket sound
-		p.playSound(p.getLocation(),Sound.ENTITY_FIREWORK_LAUNCH, 1, 1);
+		p.playSound(p.getLocation(),Sound.ENTITY_FIREWORK_SHOOT, 1, 1);
 
 		// Remove Item for non-creative user
 		if ( p.getGameMode() != GameMode.CREATIVE ) {
